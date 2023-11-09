@@ -238,7 +238,7 @@ static OSAL_THREAD_FUNC ecatcheck( void *ptr )
   }
 }
 
-void EcatInit()
+void EcatInit(char *ifname)
 {
 
   printf("[EtherCAT] Initializing EtherCAT\n");
@@ -251,7 +251,7 @@ void EcatInit()
   for(i = 1; i < 100; i++)
   {
     printf("[EtherCAT] Attempting to start EtherCAT, try %d of 100.\n", i);
-    rc = run_ethercat(ADAPTER_NAME); // todo?
+    rc = run_ethercat(ifname); // todo?
     if(rc) break;
     osal_usleep(1000000);
   }

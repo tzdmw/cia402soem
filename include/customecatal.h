@@ -16,7 +16,7 @@
 #define ADAPTER_NAME        "enp86s0"
 #define EXPECTED_SLAVE      3
 
-void EcatInit();
+void EcatInit(char *ifname);
 void EcatRun();
 
 
