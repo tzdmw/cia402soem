@@ -5,7 +5,7 @@
 
 /** \file
  * \brief
- * Headerfile for customecatal.c
+ * Headerfile for customecatal.cpp
  */
 
 #ifndef _CUSTOM_ECAT_AL
