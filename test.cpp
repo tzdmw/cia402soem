@@ -14,7 +14,9 @@ int main(int argc, char *argv[])
         xEcatData data;
 
         CAN_TxHeaderTypeDef tx;
+        CAN_TxHeaderTypeDef tx_2;
         CAN_RxHeaderTypeDef rx;
+        CAN_RxHeaderTypeDef rx_2;
 
         tx.info.sinfo.FF = 0;
         tx.info.sinfo.DLC = 0;
@@ -48,13 +50,19 @@ int main(int argc, char *argv[])
 
             CAN_AddTxMessage(CAN_ID::CAN1, tx, command);
             CAN_GetRxMessage(CAN_ID::CAN1, rx, data);
+            CAN_AddTxMessage(CAN_ID::CAN2, tx_2, command);
+            CAN_GetRxMessage(CAN_ID::CAN2, rx_2, data);
 
             tx.info.sinfo.DLC += 1;
             if (tx.info.sinfo.DLC > 8) {
                 tx.info.sinfo.DLC = 0;
                 tx.info.sinfo.FF = ~tx.info.sinfo.FF;
             }
-            printf(" %x, %x | %x, %x, %x, %x, %x, %x, %x, %x", rx.info.info, rx.Id, rx.data[0], rx.data[1], rx.data[2], rx.data[3], rx.data[4], rx.data[5], rx.data[6], rx.data[7]);
+            tx.Id += 1;
+            tx_2 = tx;
+
+            printf(" CAN1:// %x, %x | %x, %x, %x, %x, %x, %x, %x, %x |--|", rx.info.info, rx.Id, rx.data[0], rx.data[1], rx.data[2], rx.data[3], rx.data[4], rx.data[5], rx.data[6], rx.data[7]);
+            printf(" CAN2:// %x, %x | %x, %x, %x, %x, %x, %x, %x, %x", rx_2.info.info, rx_2.Id, rx_2.data[0], rx_2.data[1], rx_2.data[2], rx_2.data[3], rx_2.data[4], rx_2.data[5], rx_2.data[6], rx_2.data[7]);
             printf("\r");
             // printf("\n");
             fflush(stdout);
