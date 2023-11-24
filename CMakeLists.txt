@@ -10,7 +10,6 @@ include_directories(${SRC_DIR}/include/
                     ${SRC_DIR}/include/soem)
 
 set(COM_SRC ${SRC_DIR}/customecatal.cpp
-            ${SRC_DIR}/simple_can.cpp
             ${SRC_DIR}/test.cpp)
 add_executable(${PROJECT_NAME} ${COM_SRC})
 

@@ -2,7 +2,6 @@
  * Licensed under the GNU General Public License version 2 with exceptions. See
  * LICENSE file in the project root for full license information
  */
-
 /** \file
  * \brief
  * EthercatInit() and some useful fuc
@@ -23,7 +22,8 @@ static boolean needlf;
 static volatile int wkc;
 static boolean inOP;
 static uint8 currentgroup = 0;
-
+int os;
+int16 ob2;
 
 
 static void degraded_handler() {
@@ -57,12 +57,43 @@ static int run_ethercat(const char *ifname) {
         printf("\x1b[31m[EtherCAT] Warning: Expected %d slaves, found %d.\x1b[0m\n", EXPECTED_SLAVE, ec_slavecount);
       }
 
-      ec_config_map(&IOmap);
-      ec_configdc();
+        uint16 map_1c12=0x1600;
+        uint16 map_1c13=0x1A00;
+        ec_slave[0].state = EC_STATE_PRE_OP;
+        /* request SAFE_OP state for all slaves */
+        ec_writestate(0);
+        /* wait for all slaves to reach state */
+        ec_statecheck(0, EC_STATE_PRE_OP,  EC_TIMEOUTSTATE);
+        ec_SDOwrite(0, 0x1C12, 0x01, false,sizeof(map_1c12), &map_1c12, EC_TIMEOUTSAFE);
+        ec_SDOwrite(0, 0x1C13, 0x01, false,sizeof(map_1c13), &map_1c13, EC_TIMEOUTSAFE);
+        uint16 map_2002;
+        map_2002 = 0x0000;
+        ec_SDOwrite(0, 0x2002, 01, false,sizeof(map_2002), &map_2002, EC_TIMEOUTSAFE);
+        uint16 map_6040;
+        map_6040 = 0x6;
+        ec_SDOwrite(0, 0x1600, 01, false,sizeof(map_6040), &map_6040, EC_TIMEOUTSAFE);
+        map_6040 = 0x7;
+        ec_SDOwrite(0, 0x1600, 01, false,sizeof(map_6040), &map_6040, EC_TIMEOUTSAFE);
+        map_6040 = 0xf;
+        ec_SDOwrite(0, 0x1600, 01, false,sizeof(map_6040), &map_6040, EC_TIMEOUTSAFE);
 
+
+//        os=sizeof(ob2);ob2=0x1600;
+//        ec_SDOwrite(1, 0x1600,02,FALSE,os,&ob2,EC_TIMEOUTRXM);
+//        os=sizeof(ob2); ob2 = 0x1600;
+//        ec_SDOwrite(0,0x1c12,01,FALSE,os,&ob2,EC_TIMEOUTRXM);
+//        os=sizeof(ob2); ob2 = 0x1a00;
+//        ec_SDOwrite(0,0x1c13,01,FALSE,os,&ob2,EC_TIMEOUTRXM);//SDO
+//        uint16 map_2002;
+//        map_2002 = 0x0000;
+//        ec_SDOwrite(0, 0x2002, 01, false,sizeof(map_2002), &map_2002, EC_TIMEOUTSAFE);
+
+      ec_config_map(&IOmap);
       printf("[EtherCAT Init] Mapped slaves.\n");
       /* wait for all slaves to reach SAFE_OP state */
       ec_statecheck(0, EC_STATE_SAFE_OP,  EC_TIMEOUTSTATE * 4);
+
+
 
       for(int slave_idx = 0; slave_idx <= ec_slavecount; slave_idx++) {
         printf("[SLAVE %d]\n", slave_idx);
