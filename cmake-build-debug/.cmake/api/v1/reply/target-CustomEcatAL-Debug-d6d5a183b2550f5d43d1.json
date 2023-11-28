@@ -63,11 +63,11 @@
 			[
 				{
 					"backtrace" : 4,
-					"path" : "/tmp/debug/include"
+					"path" : "/tmp/ecat-master-simple/include"
 				},
 				{
 					"backtrace" : 4,
-					"path" : "/tmp/debug/include/soem"
+					"path" : "/tmp/ecat-master-simple/include/soem"
 				}
 			],
 			"language" : "CXX",
@@ -93,11 +93,11 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "-L/tmp/debug/lib",
+				"fragment" : "-L/tmp/ecat-master-simple/lib",
 				"role" : "libraryPath"
 			},
 			{
-				"fragment" : "-Wl,-rpath,/tmp/debug/lib",
+				"fragment" : "-Wl,-rpath,/tmp/ecat-master-simple/lib",
 				"role" : "libraries"
 			},
 			{

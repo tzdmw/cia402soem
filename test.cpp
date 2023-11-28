@@ -1,8 +1,6 @@
 #include "customecatal.h"
 #include <unistd.h>
 #include <stdio.h>
-#include <iostream>
-using namespace std;
 int main(int argc, char *argv[])
 {
     printf("CustomEcatAL(Custom EtherCAT Application Layer)\n");
@@ -12,7 +10,7 @@ int main(int argc, char *argv[])
         xEcatCommand command;
         xEcatData data;
 
-        command.PositionTargetValue=174663907;
+        command.PositionTargetValue=0;
         command.ModeOperation=0x08;
         command.padding=0;
         command.ControlWord=0;
@@ -54,18 +52,14 @@ int main(int argc, char *argv[])
           usleep(20000);
           printf("status:%d,", data.StatusWord);
       }
-    command.PositionTargetValue=data.PositionActualUserValue;
+        command.PositionTargetValue=data.PositionActualUserValue;//如果不初始化就会失控出错，重启才行
         while (1) {
             EcatRun();
-            command.PositionTargetValue+=100;
+            command.PositionTargetValue+=1;//加到1000就寄了
             setCommandEcat(&command);
             getDataEcat(&data);
-//            printf("PositionActualUserValue=%d，PositionActualEncoderValue=%d",data.PositionActualUserValue,data.PositionActualEncoderValue);
-//
-//            printf("\r");
-//            printf("\n");
-//            fflush(stdout);
-
-            usleep(1000);
+            if(data.ErrorCode!=0)
+            printf("error value:%d\n",data.ErrorCode);
+            usleep(1000);//延时太短容易寄
         }  
     }

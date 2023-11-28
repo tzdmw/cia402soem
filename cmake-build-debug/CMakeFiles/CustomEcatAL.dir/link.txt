@@ -1,1 +1,1 @@
-/usr/bin/c++ -g CMakeFiles/CustomEcatAL.dir/customecatal.cpp.o CMakeFiles/CustomEcatAL.dir/test.cpp.o -o CustomEcatAL   -L/tmp/debug/lib  -Wl,-rpath,/tmp/debug/lib -lpthread -lsoem 
+/usr/bin/c++ -g CMakeFiles/CustomEcatAL.dir/customecatal.cpp.o CMakeFiles/CustomEcatAL.dir/test.cpp.o -o CustomEcatAL   -L/tmp/ecat-master-simple/lib  -Wl,-rpath,/tmp/ecat-master-simple/lib -lpthread -lsoem 

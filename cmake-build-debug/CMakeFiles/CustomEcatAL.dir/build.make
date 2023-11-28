@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /tmp/debug
+CMAKE_SOURCE_DIR = /tmp/ecat-master-simple
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /tmp/debug/cmake-build-debug
+CMAKE_BINARY_DIR = /tmp/ecat-master-simple/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/CustomEcatAL.dir/depend.make
@@ -72,30 +72,30 @@ include CMakeFiles/CustomEcatAL.dir/flags.make
 CMakeFiles/CustomEcatAL.dir/customecatal.cpp.o: CMakeFiles/CustomEcatAL.dir/flags.make
 CMakeFiles/CustomEcatAL.dir/customecatal.cpp.o: ../customecatal.cpp
 CMakeFiles/CustomEcatAL.dir/customecatal.cpp.o: CMakeFiles/CustomEcatAL.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/debug/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/CustomEcatAL.dir/customecatal.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CustomEcatAL.dir/customecatal.cpp.o -MF CMakeFiles/CustomEcatAL.dir/customecatal.cpp.o.d -o CMakeFiles/CustomEcatAL.dir/customecatal.cpp.o -c /tmp/debug/customecatal.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/ecat-master-simple/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/CustomEcatAL.dir/customecatal.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CustomEcatAL.dir/customecatal.cpp.o -MF CMakeFiles/CustomEcatAL.dir/customecatal.cpp.o.d -o CMakeFiles/CustomEcatAL.dir/customecatal.cpp.o -c /tmp/ecat-master-simple/customecatal.cpp
 
 CMakeFiles/CustomEcatAL.dir/customecatal.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CustomEcatAL.dir/customecatal.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/debug/customecatal.cpp > CMakeFiles/CustomEcatAL.dir/customecatal.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/ecat-master-simple/customecatal.cpp > CMakeFiles/CustomEcatAL.dir/customecatal.cpp.i
 
 CMakeFiles/CustomEcatAL.dir/customecatal.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CustomEcatAL.dir/customecatal.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/debug/customecatal.cpp -o CMakeFiles/CustomEcatAL.dir/customecatal.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/ecat-master-simple/customecatal.cpp -o CMakeFiles/CustomEcatAL.dir/customecatal.cpp.s
 
 CMakeFiles/CustomEcatAL.dir/test.cpp.o: CMakeFiles/CustomEcatAL.dir/flags.make
 CMakeFiles/CustomEcatAL.dir/test.cpp.o: ../test.cpp
 CMakeFiles/CustomEcatAL.dir/test.cpp.o: CMakeFiles/CustomEcatAL.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/debug/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/CustomEcatAL.dir/test.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CustomEcatAL.dir/test.cpp.o -MF CMakeFiles/CustomEcatAL.dir/test.cpp.o.d -o CMakeFiles/CustomEcatAL.dir/test.cpp.o -c /tmp/debug/test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/ecat-master-simple/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/CustomEcatAL.dir/test.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CustomEcatAL.dir/test.cpp.o -MF CMakeFiles/CustomEcatAL.dir/test.cpp.o.d -o CMakeFiles/CustomEcatAL.dir/test.cpp.o -c /tmp/ecat-master-simple/test.cpp
 
 CMakeFiles/CustomEcatAL.dir/test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CustomEcatAL.dir/test.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/debug/test.cpp > CMakeFiles/CustomEcatAL.dir/test.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/ecat-master-simple/test.cpp > CMakeFiles/CustomEcatAL.dir/test.cpp.i
 
 CMakeFiles/CustomEcatAL.dir/test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CustomEcatAL.dir/test.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/debug/test.cpp -o CMakeFiles/CustomEcatAL.dir/test.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/ecat-master-simple/test.cpp -o CMakeFiles/CustomEcatAL.dir/test.cpp.s
 
 # Object files for target CustomEcatAL
 CustomEcatAL_OBJECTS = \
@@ -109,7 +109,7 @@ CustomEcatAL: CMakeFiles/CustomEcatAL.dir/customecatal.cpp.o
 CustomEcatAL: CMakeFiles/CustomEcatAL.dir/test.cpp.o
 CustomEcatAL: CMakeFiles/CustomEcatAL.dir/build.make
 CustomEcatAL: CMakeFiles/CustomEcatAL.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/tmp/debug/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable CustomEcatAL"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/tmp/ecat-master-simple/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable CustomEcatAL"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CustomEcatAL.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -121,6 +121,6 @@ CMakeFiles/CustomEcatAL.dir/clean:
 .PHONY : CMakeFiles/CustomEcatAL.dir/clean
 
 CMakeFiles/CustomEcatAL.dir/depend:
-	cd /tmp/debug/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /tmp/debug /tmp/debug /tmp/debug/cmake-build-debug /tmp/debug/cmake-build-debug /tmp/debug/cmake-build-debug/CMakeFiles/CustomEcatAL.dir/DependInfo.cmake --color=$(COLOR)
+	cd /tmp/ecat-master-simple/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /tmp/ecat-master-simple /tmp/ecat-master-simple /tmp/ecat-master-simple/cmake-build-debug /tmp/ecat-master-simple/cmake-build-debug /tmp/ecat-master-simple/cmake-build-debug/CMakeFiles/CustomEcatAL.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/CustomEcatAL.dir/depend
 

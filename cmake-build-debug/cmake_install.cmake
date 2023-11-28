@@ -1,4 +1,4 @@
-# Install script for directory: /tmp/debug
+# Install script for directory: /tmp/ecat-master-simple
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/tmp/debug/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/tmp/ecat-master-simple/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

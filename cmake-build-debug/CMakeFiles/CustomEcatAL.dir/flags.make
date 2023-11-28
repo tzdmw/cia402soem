@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/tmp/debug/include -I/tmp/debug/include/soem
+CXX_INCLUDES = -I/tmp/ecat-master-simple/include -I/tmp/ecat-master-simple/include/soem
 
 CXX_FLAGS = -g
 
